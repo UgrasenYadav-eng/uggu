@@ -100,7 +100,7 @@ export default function Texta(props) {
                     <button className="btn btn-primary mx-2 my-2" onClick={handleCapitalizeClick}>Capitalize Case</button>
                     <button className="btn btn-primary mx-2 my-2" onClick={handleAlternatingClick}>Alternating Case</button>
                     <button className="btn btn-primary mx-2 my-2" onClick={handleInverseClick}>Inverse Case</button>
-                    <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+                    <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>Remove extra spaces</button>
                     <button className="btn btn-success mx-2 my-2" onClick={handleCopy}>Copy</button>
                     <button className="btn btn-danger mx-2 my-2" onClick={handleClearClick}>Clear</button>
                 </div>
