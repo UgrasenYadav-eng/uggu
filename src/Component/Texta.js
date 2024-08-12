@@ -66,7 +66,7 @@ export default function Texta(props) {
     const handleClearClick = () => {
         console.log("Clear was clicked");
         setText("");
-        props.showAlert("Clear case has been enabled!", "success")
+        props.showAlert("Clear case has been Enabled!", "success")
     };
 
     const handleOnChange = (event) => {
