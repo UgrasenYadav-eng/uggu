@@ -17,17 +17,21 @@ function App() {
       msg: message,
       type: type
     })
+    setTimeout(() => {
+      setAlert(null);
+      
+    }, 1200);
   }
 
   const togglemode=()=>{
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = '#050c2a';
-      showAlert("dark mode has been Enabled", "success");  
+      showAlert("Dark mode has been Enabled.", "success");  
     }
     else {setMode('light');
         document.body.style.backgroundColor = 'white';
-        showAlert("light mode has been Enabled", "success")
+        showAlert("Light mode has been Enabled.", "success")
         }
   };
   
@@ -37,7 +41,7 @@ function App() {
 
 
    <div className="container mx-5">
-    <Texta heading="Case convertor" mode={mode}/>
+    <Texta heading="Case convertor" mode={mode} showAlert={showAlert}/>
     </div>
     
     </>

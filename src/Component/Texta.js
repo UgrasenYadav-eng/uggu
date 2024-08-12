@@ -7,18 +7,21 @@ export default function Texta(props) {
           return c.toUpperCase();
         });
         setText(newText);
+        props.showAlert("Sentance case has been enabled!", "success")
     };
 
     const handleUpClick = () => {
         console.log("Upper Case was clicked: " + text);
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Upper case has been enabled!", "success")
     };
 
     const handleLowerClick = () => {
         console.log("Lower Case was clicked: " + text);
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Lower case has been enabled!", "success")
     };
 
     const handleCapitalizeClick = () => {
@@ -27,6 +30,7 @@ export default function Texta(props) {
           return c.toUpperCase();
         });
         setText(newText);
+        props.showAlert("Capitaliza case has been enabled!", "success")
     };
 
     const handleAlternatingClick = () => {
@@ -35,6 +39,7 @@ export default function Texta(props) {
           index % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
         ).join('');
         setText(newText);
+        props.showAlert("aLtErNaTiNg case has been enabled!", "success")
     };
 
     const handleInverseClick = () => {
@@ -43,21 +48,25 @@ export default function Texta(props) {
           char === char.toLowerCase() ? char.toUpperCase() : char.toLowerCase()
         ).join('');
         setText(newText);
+        props.showAlert("Inverse case has been enabled!", "success")
     };
     const handleExtraSpaces = () => {
         console.log("extra spaces button has clicked")
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
+        props.showAlert("Extra spaces remove has been enabled!", "success")
     }
 
     const handleCopy = () => {
         console.log("Copy was clicked: " + text);
         navigator.clipboard.writeText(text);
+        props.showAlert("Copy case has been enabled!", "success")
     };
 
     const handleClearClick = () => {
         console.log("Clear was clicked");
         setText("");
+        props.showAlert("Clear case has been enabled!", "success")
     };
 
     const handleOnChange = (event) => {
